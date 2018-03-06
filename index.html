@@ -21,7 +21,6 @@
                 data: {
                     labels: ["2014", "2015", "2016"],
                     datasets: [{
-                        label: '# of students',
                         data: [73, 199, 395],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -43,10 +42,23 @@
                     }]
                 },
                 options: {
+                    legend: {
+                        display: false
+                    },
                     scales: {
                         yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: "Number of Students"
+                            },
                             ticks: {
                                 beginAtZero:true
+                            }
+                        }],
+                        xAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: "Year"
                             }
                         }]
                     }
